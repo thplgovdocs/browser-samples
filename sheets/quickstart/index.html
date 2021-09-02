@@ -121,12 +121,12 @@ limitations under the License.
        */
       function listMajors() {
         gapi.client.sheets.spreadsheets.values.get({
-          spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
-          range: 'Class Data!A2:E',
+          spreadsheetId: '1Sq79dHUXdt1X4knIxIquVHph2Tf1N8NIBQI_xAfCuRY',
+          range: 'Data!A2:E',
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
-            appendPre('Name, Major:');
+            appendPre('Name, Birthdate:');
             for (i = 0; i < range.values.length; i++) {
               var row = range.values[i];
               // Print columns A and E, which correspond to indices 0 and 4.
